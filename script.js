@@ -40,10 +40,10 @@ function nearestNeighborScale(
 ) {
   for (let y = 0; y < originalHeight; y++) {
     for (let x = 0; x < originalWidth; x++) {
-      imageToBeScaled[x * 2][y * 2] = originalImgData[x][y];
-      imageToBeScaled[x * 2 + 1][y * 2] = originalImgData[x][y];
-      imageToBeScaled[x * 2][y * 2 + 1] = originalImgData[x][y];
-      imageToBeScaled[x * 2 + 1][y * 2 + 1] = originalImgData[x][y];
+      imageToBeScaled[y * 2][x * 2] = originalImgData[y][x];
+      imageToBeScaled[y * 2 + 1][x * 2] = originalImgData[y][x];
+      imageToBeScaled[y * 2][x * 2 + 1] = originalImgData[y][x];
+      imageToBeScaled[y * 2 + 1][x * 2 + 1] = originalImgData[y][x];
     }
   }
   return imageToBeScaled;
