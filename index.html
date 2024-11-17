@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilinear Image Scaling</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    canvas {
+      border: 1px solid #000;
+      image-rendering: pixelated;
+      min-width: 300px;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      margin-right: 3rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bilinear Image Scaling</h1>
+  <p>This is a JavaScript canvas implmentation of the bilinear scaling. The image you upload is scaled 200% bilinearly and 200% in nearest nearest neighbor (for comparisson).
+  </p>
+  <h2>Upload an Image</h2>
+  <input type="file" id="imageInput" accept="image/*"><br><br>
+  <h2>Results</h2>
+  <div class="flex-row">
+    <div class="result">
+      <label for="nearestNeighbor">Nearest Neighbor</label>
+      <canvas id="nearestNeighbor"></canvas>
+    </div>
+    <div class="result">
+      <label for="bilinearScaled">Bilinear</label>
+      <canvas id="bilinearScaled"></canvas>
+    </div>
+  </div>
+  <footer>
+    Coded by <a href="https://github.com/M-Valentino/Bilinear-Scaling">Mark Valentino</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

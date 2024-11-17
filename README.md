@@ -1,0 +1,1 @@
+This is a simple JavaScript canvas implementation of the bilinear image scaling algorithm.
